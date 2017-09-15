@@ -1,9 +1,11 @@
-module helloworld (clk,
-						led);
-input clk;
-output reg led;
+module helloworld (clk, led);	
+		input clk;
+		output reg [7:0] led; 
+	
+
 
 reg [31:0] counter;
+reg [7:0] i;
 
 always @ (posedge clk)
 begin
@@ -14,9 +16,15 @@ begin
 
 	else
 	begin
-		counter <= 0;
-		led <= ~led;
+	counter <= 0;
+		for (i = 0; i <= 7; i = i + 1)
+		begin
+			
+			led[i] <= ~led[i];
+		end
 	end
+	
+	
 end
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for helloworld
-Thu Sep 14 15:05:50 2017
+Fri Sep 15 10:41:29 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -13,10 +13,11 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -43,7 +44,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Sep 14 15:05:50 2017       ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 15 10:41:29 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; helloworld                                  ;
 ; Top-level Entity Name              ; helloworld                                  ;
@@ -52,7 +53,7 @@ agreement for further details.
 ;     Total combinational functions  ; 45                                          ;
 ;     Dedicated logic registers      ; 33                                          ;
 ; Total registers                    ; 33                                          ;
-; Total pins                         ; 2                                           ;
+; Total pins                         ; 9                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -159,17 +160,17 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.1%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                            ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
-; helloworld.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Clement/Desktop/Clement/Work/Code/FPGA/helloworld/helloworld.v ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
+; helloworld.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Clement/Desktop/Clement/Work/Code/FPGA/helloworld/helloworld.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -193,14 +194,14 @@ agreement for further details.
 ;     -- Dedicated logic registers            ; 33           ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
-; I/O pins                                    ; 2            ;
+; I/O pins                                    ; 9            ;
 ;                                             ;              ;
 ; Embedded Multiplier 9-bit elements          ; 0            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; LessThan0~11 ;
 ; Maximum fan-out                             ; 33           ;
-; Total fan-out                               ; 213          ;
-; Average fan-out                             ; 2.60         ;
+; Total fan-out                               ; 227          ;
+; Average fan-out                             ; 2.36         ;
 +---------------------------------------------+--------------+
 
 
@@ -209,9 +210,25 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |helloworld                ; 45 (45)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |helloworld         ; helloworld  ; work         ;
+; |helloworld                ; 45 (45)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 9    ; 0            ; |helloworld         ; helloworld  ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------+
+; Registers Removed During Synthesis                              ;
++---------------------------------------+-------------------------+
+; Register name                         ; Reason for Removal      ;
++---------------------------------------+-------------------------+
+; led[7]~reg0                           ; Merged with led[6]~reg0 ;
+; led[2]~reg0                           ; Merged with led[6]~reg0 ;
+; led[5]~reg0                           ; Merged with led[6]~reg0 ;
+; led[3]~reg0                           ; Merged with led[6]~reg0 ;
+; led[1]~reg0                           ; Merged with led[6]~reg0 ;
+; led[4]~reg0                           ; Merged with led[6]~reg0 ;
+; led[0]~reg0                           ; Merged with led[6]~reg0 ;
+; Total Number of Removed Registers = 7 ;                         ;
++---------------------------------------+-------------------------+
 
 
 +------------------------------------------------------+
@@ -234,7 +251,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 2                           ;
+; boundary_port         ; 9                           ;
 ; cycloneiii_ff         ; 33                          ;
 ;     SCLR              ; 32                          ;
 ;     plain             ; 1                           ;
@@ -257,7 +274,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -267,24 +284,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Sep 14 15:05:25 2017
+    Info: Processing started: Fri Sep 15 10:41:19 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off helloworld -c helloworld
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Warning (12125): Using design file helloworld.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+Info (12021): Found 1 design units, including 1 entities, in source file helloworld.v
     Info (12023): Found entity 1: helloworld File: C:/Users/Clement/Desktop/Clement/Work/Code/FPGA/helloworld/helloworld.v Line: 1
 Info (12127): Elaborating entity "helloworld" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at helloworld.v(20): truncated value with size 32 to match size of target (8) File: C:/Users/Clement/Desktop/Clement/Work/Code/FPGA/helloworld/helloworld.v Line: 20
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 47 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 54 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 1 output pins
+    Info (21059): Implemented 8 output pins
     Info (21061): Implemented 45 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 650 megabytes
-    Info: Processing ended: Thu Sep 14 15:05:50 2017
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:41
+    Info: Processing ended: Fri Sep 15 10:41:29 2017
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:20
 
 
