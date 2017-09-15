@@ -47,14 +47,14 @@ clk => counter[28].CLK
 clk => counter[29].CLK
 clk => counter[30].CLK
 clk => counter[31].CLK
-led[0] <= led[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-led[1] <= led[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-led[2] <= led[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-led[3] <= led[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-led[4] <= led[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-led[5] <= led[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-led[6] <= led[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-led[7] <= led[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[0] << led[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[1] << led[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[2] << led[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[3] << led[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[4] << led[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[5] << led[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[6] << led[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[7] << led[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 key0 => always0.IN0
 key1 => always0.IN1
 

@@ -8,9 +8,6 @@ module helloworld (clk, led, key0, key1);
 
 reg [31:0] counter;
 reg [7:0] i;
-//assign i = 0;
-//assign led[0] = 1;
-
 
 
 always @ (posedge clk)
@@ -28,7 +25,7 @@ begin
 		led[0] <= 1;
 	end
 	
-		if (key0 | key1)
+		if (~key0 | ~key1)
 		begin
 			if (i < 7)
 			begin

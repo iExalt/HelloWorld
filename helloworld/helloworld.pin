@@ -102,7 +102,7 @@ RESERVED_INPUT               : B14       :        :                   :         
 GND                          : B15       : gnd    :                   :         :           :                
 RESERVED_INPUT               : B16       :        :                   :         : 6         :                
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C1        : input  : 2.5 V             :         : 1         : N              
-key1                         : C2        : input  : 2.5 V             :         : 1         : N              
+RESERVED_INPUT               : C2        :        :                   :         : 1         :                
 RESERVED_INPUT               : C3        :        :                   :         : 8         :                
 VCCIO8                       : C4        : power  :                   : 2.5V    : 8         :                
 GND                          : C5        : gnd    :                   :         :           :                
@@ -211,7 +211,7 @@ GND                          : J11       : gnd    :                   :         
 VCCINT                       : J12       : power  :                   : 1.2V    :           :                
 RESERVED_INPUT               : J13       :        :                   :         : 5         :                
 RESERVED_INPUT               : J14       :        :                   :         : 5         :                
-RESERVED_INPUT               : J15       :        :                   :         : 5         :                
+key1                         : J15       : input  : 2.5 V             :         : 5         : Y              
 RESERVED_INPUT               : J16       :        :                   :         : 5         :                
 RESERVED_INPUT               : K1        :        :                   :         : 2         :                
 RESERVED_INPUT               : K2        :        :                   :         : 2         :                

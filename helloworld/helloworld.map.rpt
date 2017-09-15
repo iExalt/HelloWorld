@@ -1,5 +1,5 @@
 Analysis & Synthesis report for helloworld
-Fri Sep 15 19:23:22 2017
+Fri Sep 15 19:42:25 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Sep 15 19:23:22 2017       ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 15 19:42:25 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; helloworld                                  ;
 ; Top-level Entity Name              ; helloworld                                  ;
@@ -270,14 +270,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Sep 15 19:23:12 2017
+    Info: Processing started: Fri Sep 15 19:42:16 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off helloworld -c helloworld
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file helloworld.v
     Info (12023): Found entity 1: helloworld File: C:/Users/Clement/Desktop/Clement/Work/Code/FPGA/helloworld/helloworld.v Line: 1
 Info (12127): Elaborating entity "helloworld" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at helloworld.v(36): truncated value with size 32 to match size of target (8) File: C:/Users/Clement/Desktop/Clement/Work/Code/FPGA/helloworld/helloworld.v Line: 36
+Warning (10230): Verilog HDL assignment warning at helloworld.v(33): truncated value with size 32 to match size of target (8) File: C:/Users/Clement/Desktop/Clement/Work/Code/FPGA/helloworld/helloworld.v Line: 33
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -287,10 +287,10 @@ Info (21057): Implemented 127 device resources after synthesis - the final resou
     Info (21061): Implemented 116 logic cells
 Info (144001): Generated suppressed messages file C:/Users/Clement/Desktop/Clement/Work/Code/FPGA/helloworld/helloworld.map.smsg
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 648 megabytes
-    Info: Processing ended: Fri Sep 15 19:23:22 2017
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 650 megabytes
+    Info: Processing ended: Fri Sep 15 19:42:25 2017
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:19
 
 
 +------------------------------------------+
