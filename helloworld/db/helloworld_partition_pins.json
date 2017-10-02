@@ -36,7 +36,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "dipswitch[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dipswitch[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dipswitch[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dipswitch[1]",
 					"strict" : false
 				},
 				{
@@ -45,6 +57,10 @@
 				},
 				{
 					"name" : "key1",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
 					"strict" : false
 				}
 			]

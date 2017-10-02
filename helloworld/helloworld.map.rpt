@@ -1,5 +1,5 @@
 Analysis & Synthesis report for helloworld
-Fri Sep 15 19:42:25 2017
+Mon Oct 02 11:34:57 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -13,11 +13,13 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
- 12. Analysis & Synthesis Suppressed Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+ 14. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -44,16 +46,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Sep 15 19:42:25 2017       ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 02 11:34:57 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; helloworld                                  ;
 ; Top-level Entity Name              ; helloworld                                  ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 116                                         ;
-;     Total combinational functions  ; 116                                         ;
-;     Dedicated logic registers      ; 48                                          ;
-; Total registers                    ; 48                                          ;
-; Total pins                         ; 11                                          ;
+; Total logic elements               ; 372                                         ;
+;     Total combinational functions  ; 372                                         ;
+;     Dedicated logic registers      ; 72                                          ;
+; Total registers                    ; 72                                          ;
+; Total pins                         ; 15                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -164,45 +166,45 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                          ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                            ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
-; helloworld.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Clement/Desktop/Clement/Work/Code/FPGA/helloworld/helloworld.v ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
+; helloworld.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Clement/Desktop/Clement/Work/Code/GitHub/HelloWorld/helloworld/helloworld.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 116       ;
-;                                             ;           ;
-; Total combinational functions               ; 116       ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 53        ;
-;     -- 3 input functions                    ; 12        ;
-;     -- <=2 input functions                  ; 51        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 78        ;
-;     -- arithmetic mode                      ; 38        ;
-;                                             ;           ;
-; Total registers                             ; 48        ;
-;     -- Dedicated logic registers            ; 48        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 11        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 48        ;
-; Total fan-out                               ; 509       ;
-; Average fan-out                             ; 2.74      ;
-+---------------------------------------------+-----------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 372          ;
+;                                             ;              ;
+; Total combinational functions               ; 372          ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 165          ;
+;     -- 3 input functions                    ; 57           ;
+;     -- <=2 input functions                  ; 150          ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 223          ;
+;     -- arithmetic mode                      ; 149          ;
+;                                             ;              ;
+; Total registers                             ; 72           ;
+;     -- Dedicated logic registers            ; 72           ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 15           ;
+;                                             ;              ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; LessThan0~10 ;
+; Maximum fan-out                             ; 72           ;
+; Total fan-out                               ; 1366         ;
+; Average fan-out                             ; 2.88         ;
++---------------------------------------------+--------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -210,9 +212,19 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |helloworld                ; 116 (116)           ; 48 (48)                   ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |helloworld         ; helloworld  ; work         ;
+; |helloworld                ; 372 (372)           ; 72 (72)                   ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |helloworld         ; helloworld  ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; toggle[0..3]                          ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 4 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -220,14 +232,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 48    ;
+; Total registers                              ; 72    ;
 ; Number of registers using Synchronous Clear  ; 32    ;
-; Number of registers using Synchronous Load   ; 2     ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Clock Enable       ; 40    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |helloworld|i              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-----------------------------------------------------+
@@ -235,23 +256,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 11                          ;
-; cycloneiii_ff         ; 48                          ;
-;     ENA               ; 8                           ;
-;     ENA SLD           ; 2                           ;
+; boundary_port         ; 15                          ;
+; cycloneiii_ff         ; 72                          ;
+;     ENA               ; 40                          ;
 ;     SCLR              ; 32                          ;
-;     plain             ; 6                           ;
-; cycloneiii_lcell_comb ; 116                         ;
-;     arith             ; 38                          ;
-;         2 data inputs ; 38                          ;
-;     normal            ; 78                          ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 11                          ;
-;         3 data inputs ; 12                          ;
-;         4 data inputs ; 53                          ;
+; cycloneiii_lcell_comb ; 372                         ;
+;     arith             ; 149                         ;
+;         2 data inputs ; 115                         ;
+;         3 data inputs ; 34                          ;
+;     normal            ; 223                         ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 23                          ;
+;         4 data inputs ; 165                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 4.79                        ;
+; Max LUT depth         ; 21.60                       ;
+; Average LUT depth     ; 13.75                       ;
 +-----------------------+-----------------------------+
 
 
@@ -260,7 +280,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -270,32 +290,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Sep 15 19:42:16 2017
+    Info: Processing started: Mon Oct 02 11:34:45 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off helloworld -c helloworld
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file helloworld.v
-    Info (12023): Found entity 1: helloworld File: C:/Users/Clement/Desktop/Clement/Work/Code/FPGA/helloworld/helloworld.v Line: 1
+    Info (12023): Found entity 1: helloworld File: C:/Users/Clement/Desktop/Clement/Work/Code/GitHub/HelloWorld/helloworld/helloworld.v Line: 1
 Info (12127): Elaborating entity "helloworld" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at helloworld.v(33): truncated value with size 32 to match size of target (8) File: C:/Users/Clement/Desktop/Clement/Work/Code/FPGA/helloworld/helloworld.v Line: 33
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 127 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
+Info (21057): Implemented 418 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 116 logic cells
-Info (144001): Generated suppressed messages file C:/Users/Clement/Desktop/Clement/Work/Code/FPGA/helloworld/helloworld.map.smsg
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 650 megabytes
-    Info: Processing ended: Fri Sep 15 19:42:25 2017
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:19
+    Info (21061): Implemented 403 logic cells
+Info (144001): Generated suppressed messages file C:/Users/Clement/Desktop/Clement/Work/Code/GitHub/HelloWorld/helloworld/helloworld.map.smsg
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 653 megabytes
+    Info: Processing ended: Mon Oct 02 11:34:57 2017
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Clement/Desktop/Clement/Work/Code/FPGA/helloworld/helloworld.map.smsg.
+The suppressed messages can be found in C:/Users/Clement/Desktop/Clement/Work/Code/GitHub/HelloWorld/helloworld/helloworld.map.smsg.
 
 

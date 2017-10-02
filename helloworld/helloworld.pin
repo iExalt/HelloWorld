@@ -93,7 +93,7 @@ RESERVED_INPUT               : B5        :        :                   :         
 RESERVED_INPUT               : B6        :        :                   :         : 8         :                
 RESERVED_INPUT               : B7        :        :                   :         : 8         :                
 GND+                         : B8        :        :                   :         : 8         :                
-GND+                         : B9        :        :                   :         : 7         :                
+dipswitch[2]                 : B9        : input  : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : B10       :        :                   :         : 7         :                
 RESERVED_INPUT               : B11       :        :                   :         : 7         :                
 RESERVED_INPUT               : B12       :        :                   :         : 7         :                
@@ -245,7 +245,7 @@ RESERVED_INPUT               : L13       :        :                   :         
 RESERVED_INPUT               : L14       :        :                   :         : 5         :                
 RESERVED_INPUT               : L15       :        :                   :         : 5         :                
 RESERVED_INPUT               : L16       :        :                   :         : 5         :                
-GND+                         : M1        :        :                   :         : 2         :                
+dipswitch[0]                 : M1        : input  : 2.5 V             :         : 2         : Y              
 GND+                         : M2        :        :                   :         : 2         :                
 VCCIO2                       : M3        : power  :                   : 2.5V    : 2         :                
 GND                          : M4        : gnd    :                   :         :           :                
@@ -259,7 +259,7 @@ VCCINT                       : M11       : power  :                   : 1.2V    
 GNDA4                        : M12       : gnd    :                   :         :           :                
 GND                          : M13       : gnd    :                   :         :           :                
 VCCIO5                       : M14       : power  :                   : 2.5V    : 5         :                
-GND+                         : M15       :        :                   :         : 5         :                
+dipswitch[3]                 : M15       : input  : 2.5 V             :         : 5         : Y              
 GND+                         : M16       :        :                   :         : 5         :                
 RESERVED_INPUT               : N1        :        :                   :         : 2         :                
 RESERVED_INPUT               : N2        :        :                   :         : 2         :                
@@ -316,7 +316,7 @@ RESERVED_INPUT               : T4        :        :                   :         
 RESERVED_INPUT               : T5        :        :                   :         : 3         :                
 RESERVED_INPUT               : T6        :        :                   :         : 3         :                
 RESERVED_INPUT               : T7        :        :                   :         : 3         :                
-GND+                         : T8        :        :                   :         : 3         :                
+dipswitch[1]                 : T8        : input  : 2.5 V             :         : 3         : Y              
 GND+                         : T9        :        :                   :         : 4         :                
 RESERVED_INPUT               : T10       :        :                   :         : 4         :                
 RESERVED_INPUT               : T11       :        :                   :         : 4         :                

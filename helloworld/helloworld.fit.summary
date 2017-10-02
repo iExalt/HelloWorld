@@ -1,15 +1,15 @@
-Fitter Status : Successful - Fri Sep 15 19:42:31 2017
+Fitter Status : Successful - Mon Oct 02 11:35:05 2017
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : helloworld
 Top-level Entity Name : helloworld
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 116 / 22,320 ( < 1 % )
-    Total combinational functions : 116 / 22,320 ( < 1 % )
-    Dedicated logic registers : 48 / 22,320 ( < 1 % )
-Total registers : 48
-Total pins : 11 / 154 ( 7 % )
+Total logic elements : 373 / 22,320 ( 2 % )
+    Total combinational functions : 372 / 22,320 ( 2 % )
+    Dedicated logic registers : 72 / 22,320 ( < 1 % )
+Total registers : 72
+Total pins : 15 / 154 ( 10 % )
 Total virtual pins : 0
 Total memory bits : 0 / 608,256 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
